@@ -1,0 +1,20 @@
+O ciclo apresentado na figura apresenta o processo TDD de um projeto que usa testes funcionais e testes de unidade, e nele
+podemos ver dois ciclos tdd aninhados, cada um com seu respectivo passo de execução dos testes, implementação,
+no qual o código é escritoaos poucos, e refatoração. Como se tratam de dois tipos diferentes de testes, cada um deve
+ter o seu ciclo TDD, baseado naquilo que testam. Por exemplo, o teste funcional testa uma feature completa do sistema.
+Nesse caso, o seu passo de implementação envolve a implementação tarefa a tarefa de uma história completa. Já o teste de unidade
+testa os métodos de uma classe, então o passo de implementação envolve a implementação passo a passo de uma classe ou trecho de código, que
+será um componente para uma feature.
+
+Portanto, para que um passo da implementação prevista no ciclo dos testes funcionais possa ocorrer, um ciclo tdd inteiro
+dos testes de unidade deve acontecer, para que uma classe ou um fragmento de implementação possa ser implementado corretamente.
+Ou seja, a validação só pode ser feita em um fragmento de código em que a verificação já foi feita. Por isso, no processo
+completo, o ciclo tdd dos testes de unidade está contido no passo de implementação dos testes funcionais, pois para cada
+elemento validado no teste funcional, deve ocorrer um ciclo tdd inteiro nos testes de unidade para que ela possa ser verificada antes.
+
+Desse modo, o processo tdd nesse caso segue o seguinte ritmo: Escrevemos testes funcionais para a feature testada e executamos.
+Inicialmente eles irão falhar, então passamos para o passo de implementação. Para o que será implementado, escrevemos testes de unidade
+e executamos. Inicialmente eles também irão falhar, então escrevemos código mínimo até que o teste passe. Refatoramos o código e finalizamos
+um ciclo tdd no teste de unidade. Feito isso, verificamos se agora o teste funcional passa. Se não passar, iniciamos um novo ciclo tdd para o
+teste de unidade. Se passar, passamos para a refatoração do código com respeito à feature completa. Esse passo, como não introduz bugs, não precisa
+passar por um ciclo tdd de unidade.
